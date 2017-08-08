@@ -1,7 +1,5 @@
 package erick.android.textexpandable;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -56,17 +54,6 @@ public class MainActivity extends AppCompatActivity {
                 ViewGroup.LayoutParams params = tvDescription.getLayoutParams();
                 params.height = value;
                 tvDescription.setLayoutParams(params);
-            }
-        });
-        anim.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                super.onAnimationEnd(animation);
-            }
-
-            @Override
-            public void onAnimationStart(Animator animation) {
-                super.onAnimationStart(animation);
             }
         });
         anim.setDuration(600);
